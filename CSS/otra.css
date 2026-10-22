@@ -1,0 +1,112 @@
+/* otra.css - marco doble grueso con esquinas redondeadas, rosa antiguo suave, símbolo ❂ */
+:root {
+  --fondo: #2b1d22;
+  --papel: #3a272e;
+  --texto: #e8e2d4;
+  --acento: #e0a3a8;
+  --linea: rgba(224, 163, 168, 0.35);
+  --brillo: rgba(224, 163, 168, 0.16);
+  --marco-estilo: double;
+  --marco-grosor: 8px;
+  --simbolo: "❂";
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 64px 28px;
+  min-height: 100vh;
+  background: var(--fondo);
+  color: var(--texto);
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.6;
+}
+
+body > * { max-width: 640px; margin-left: auto; margin-right: auto; }
+
+/* Marco místico */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 10px;
+  border: var(--marco-grosor) var(--marco-estilo) var(--acento);
+  border-radius: 14px;
+  box-shadow: 0 0 18px var(--brillo), inset 0 0 18px var(--brillo);
+  pointer-events: none;
+}
+body::after {
+  content: "";
+  position: fixed;
+  inset: 28px;
+  border: 1px solid var(--linea);
+  border-radius: 8px;
+  pointer-events: none;
+}
+
+a { color: var(--acento); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+h1 {
+  text-align: center;
+  font-weight: normal;
+  letter-spacing: 0.04em;
+  margin: 1.2rem auto 0.6rem;
+}
+h1::before, h1::after { content: var(--simbolo); color: var(--acento); margin: 0 0.6rem; font-size: 0.7em; }
+
+h2 {
+  color: var(--acento);
+  font-weight: normal;
+  font-size: 1.15rem;
+  letter-spacing: 0.08em;
+  border-bottom: 1px solid var(--linea);
+  padding-bottom: 0.3rem;
+  margin-top: 2rem;
+}
+
+code { background: var(--papel); padding: 0.1rem 0.35rem; border-radius: 3px; color: var(--acento); }
+
+ul { padding-left: 1.2rem; }
+li { margin: 0.5rem 0; }
+
+form {
+  background: var(--papel);
+  border: 1px solid var(--linea);
+  border-radius: 6px;
+  padding: 1.2rem 1.4rem;
+  margin-top: 1.5rem;
+}
+
+label { display: block; }
+
+input {
+  width: 100%;
+  margin-top: 0.3rem;
+  padding: 0.5rem 0.7rem;
+  background: var(--fondo);
+  color: var(--texto);
+  border: 1px solid var(--linea);
+  border-radius: 4px;
+  font: inherit;
+}
+input:focus { outline: none; border-color: var(--acento); box-shadow: 0 0 8px var(--brillo); }
+input[readonly] { background: transparent; border-style: dashed; color: var(--acento); }
+
+button {
+  padding: 0.5rem 1rem;
+  margin: 0.2rem 0.3rem 0.2rem 0;
+  background: transparent;
+  color: var(--acento);
+  border: 1px solid var(--acento);
+  border-radius: 4px;
+  font: inherit;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s;
+}
+button:hover { background: var(--brillo); box-shadow: 0 0 10px var(--brillo); }
+
+table { width: 100%; border-collapse: collapse; background: var(--papel); border: 1px solid var(--linea); }
+th, td { padding: 0.55rem 0.8rem; border: 1px solid var(--linea); text-align: left; }
+th { color: var(--acento); font-weight: normal; letter-spacing: 0.06em; }
+td:last-child { text-align: right; }

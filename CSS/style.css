@@ -1,0 +1,77 @@
+/* Estilos generales de la página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f8;
+    color: #333;
+    margin: 0;
+    padding: 30px;
+}
+
+/* Título principal */
+h1 {
+    color: #2563eb;
+    text-align: center;
+}
+
+/* Subtítulos */
+h2 {
+    color: #1e40af;
+    margin-top: 25px;
+}
+
+/* Párrafos */
+p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Formulario */
+form {
+    background-color: white;
+    max-width: 500px;
+    margin: 30px auto;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Etiquetas */
+label {
+    display: inline-block;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+/* Campos de entrada */
+input {
+    padding: 10px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    margin: 5px;
+    font-size: 15px;
+}
+
+/* Botones */
+button {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    padding: 10px 14px;
+    margin: 5px 3px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* Efecto al pasar el mouse */
+button:hover {
+    background-color: #1d4ed8;
+}
+
+/* Campo del resultado */
+input[readonly],
+#resultado1 {
+    background-color: #e2e8f0;
+}
+
+
